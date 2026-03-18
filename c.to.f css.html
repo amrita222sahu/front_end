@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Temperature Converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #e87fc7, #eba4d7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            text-align: center;
+            width: 300px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        input:focus {
+            border-color: #4facfe;
+            outline: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4facfe;
+            color: white;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #00c6ff;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Temperature Converter</h2>
+    
+    <input id="f" type="text" placeholder="Fahrenheit">
+    <input id="c" type="text" placeholder="Celsius">
+
+    <button onclick="fahrenheit()">Convert to Fahrenheit</button>
+    <button onclick="celsius()">Convert to Celsius</button>
+</div>
+
+<script>
+function fahrenheit(){
+    let c = parseFloat(document.getElementById("c").value);
+    if (!isNaN(c)) {
+        let f = (c * 9 / 5) + 32;
+        document.getElementById("f").value = f.toFixed(2);
+    }
+}
+
+function celsius(){
+    let f = parseFloat(document.getElementById("f").value);
+    if (!isNaN(f)) {
+        let c = (f - 32) * 5 / 9;
+        document.getElementById("c").value = c.toFixed(2);
+    }
+}
+</script>
+
+</body>
+</html>

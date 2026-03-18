@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Navigation Full Code</title>
+
+    <style>
+        body {
+            font-family: Arial;
+        }
+        #container {
+            border: 2px solid black;
+            padding: 10px;
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>DOM Navigation Example</h2>
+
+<div id="container">
+    <h3>Heading</h3>
+    <p>First Paragraph</p>
+    <p>Second Paragraph</p>
+    <button id="btn">Click Me</button>
+</div>
+
+<script>
+    // Select container
+    let container = document.getElementById("container");
+
+    // Parent Element
+    console.log("Parent:", container.parentElement);
+
+    // Children
+    console.log("All Children:", container.children);
+
+    // First & Last Child
+    console.log("First Child:", container.firstElementChild);
+    console.log("Last Child:", container.lastElementChild);
+
+    // Select paragraph
+    let para = container.children[1];
+
+    // Next & Previous Sibling
+    console.log("Next Sibling:", para.nextElementSibling);
+    console.log("Previous Sibling:", para.previousElementSibling);
+
+    // Change content using DOM
+    para.style.color = "blue";
+    para.innerHTML = "Paragraph changed using DOM";
+
+    // Button click DOM action
+    document.getElementById("btn").onclick = function () {
+        container.lastElementChild.innerHTML = "Button Clicked!";
+    };
+</script>
+
+</body>
+</html>
+
+

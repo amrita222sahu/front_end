@@ -6,136 +6,22 @@
     <title>Document</title>
 </head>
 <body>
-     <script>
-    function checkoddEven(){
-      
-let num = Number(prompt("Enter a number:"));
+    <script>
+    function calculate (a , b) {
 
-if (num % 2 === 0) {
-  alert("Even Number");
-} else {
-  alert("Odd Number");
-}
-    }
-    function checkinvalidoperator(){
-let num1 = Number(prompt("Enter first number:"));
-let num2 = Number(prompt("Enter second number:"));
-let op = prompt("Enter operator (+, -, *, /):");
-let result;
+        console.log ("Addition", a + b);
+        console.log ("subtraction", a - b);
+        console.log ("Multiplication", a * b);
 
-if (op === "+") {
-  result = num1 + num2;
-} else if (op === "-") {
-  result = num1 - num2;
-} else if (op === "*") {
-  result = num1 * num2;
-} else if (op === "/") {
-  result = num1 / num2;
-} else {
-  alert("Invalid operator");
-}
-    }
-    function checkGrade(){
-let marks = Number(prompt("Enter marks (0-100):"));
-let grade;
-
-if (marks >= 90 && marks <= 100) {
-  grade = "A+";
-} else if (marks >= 80) {
-  grade = "A";
-} else if (marks >= 70) {
-  grade = "B";
-} else if (marks >= 60) {
-  grade = "C";
-} else if (marks >= 50) {
-  grade = "D";
-} else {
-  grade = "Fail";
-}
-    }
-    function checklargestnumber(){
-    let num1 = Number(prompt("Enter first number: "));
-    let num2 = Number(prompt("Enter second number: "));
-    let num3 = Number(prompt("Enter third number: "));
-
-    let largest;
-    
-    if(num1 >= num2 && num1 >= num3){
-        largest = num1;
-        
-
-    }else if(num2 >= num1 && num2 >= num3){
-        largest = num2;
-
-    }else{
-        largest = num3;
-    }
-    console.log("The largest number is:" +largest);
-    document.write("The largest number is:" +largest);
-    
-
-alert("Grade: " + grade);
-    }
-    function checkswapnumber(){
-     let x = 5;
-         x = Number(x);
-
-        let y = 6;
-         y = Number(y);
-
-        console.log("Before swap");
-        console.log("x",x)
-        console.log("y",y)
-
-        x = x + y;
-        y = x - y;
-        x = x - y;
-
-        console.log("After Swap");
-        console.log("x",x)
-        console.log("y",y)
-    }
-    function checkreverse(){
-    let n = Number (prompt("Enter a number: "));
-        let reverse = 0;
-        let remainder;
-
-        while (n > 0){
-            remainder = n % 10;
-            reverse = reverse * 10 + remainder;
-            n = (n / 10)|0;
-        }
-        
-        console.log("reverse",reverse);
-    }
-    function checkreversenumber(){
-     let n = Number (prompt("Enter a number"));
-        let reverse = 0;
-        let remainder;
-        temp = n;
-
-        while (n > 0){
-        remainder = n % 10;
-        reverse = reverse * 10 + remainder;
-        n = (n / 10)|0;
-        }
-
-        if (temp == reverse){
-            console.log("yes",reverse)
+        if (b != 0){
+             console.log ("Division", a / b);
         }else{
-             console.log("no",reverse)
+            console.log ("Not possible")
         }
+       
     }
 
-        
-
-</script>
-<button onclick="checkoddeven()">check odd even</button>
-<button onclick="checkinvalidoperator()">check Invalid operator</button>
-<button onclick="checkGrade()">check Grade</button>
-<button onclick="checklargestnumber()">check largest number</button>
-<button onclick="checkswapnumber()">check swap number</button>
-<button onclick="checkreverse()">check reverse</button>
-<button onclick="checkreversenumber()">check reverse number</button>
+    calculate(10,5);
+    </script>
 </body>
-</html> 
+</html>
