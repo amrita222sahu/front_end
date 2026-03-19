@@ -2,16 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        button:hover{
-            background-color: green;
+</head>
+<body><script>
+    function  checkevenodd(){
+       let number=prompt("enter a number");
+        if(number  %2==0){
+            alert ( number+"is even");
 
         }
-    </style>
-</head>
-<body>
-    <button>click</button>
+        else{
+alert(number+"is odd");
+
+        }  
+    }
+    function checkGrade(){
+        let marks = prompt ("enter marks (0-100)");
+        let grade;
+        if(marks>=90 && marks<=100){
+            grade= "A+";
+        }
+        else if (marks >=80){
+             alert (grade= "A");
+        }
+        else if(marks >=70) {
+           alert( grade="B");
+
+        }
+        else if( marks >=60){
+           alert( grade="c");
+        
+        }
+        else if( marks <=50){
+          alert(  grade="D");
+        }
+         else{
+           alert( grade="fail");
+
+        }
+        alert ("your grade is:"+grade);
+
+    }
+    
+    
+  </script>
+  <button onclick="checkevenodd()">checkevenodd</button> 
+  <button onclick="checkGrade()">checkGrade</button>
+Now
+
+Add an Emoji, Sticker, or GIF
+
+
 </body>
 </html>

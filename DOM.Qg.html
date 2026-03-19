@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Timing event</h1>
+    <h2>settimeout method()</h2>
+    <p id="clock">click</p>
+    <button id="show">click</button>
+    <script>
+
+        
+            const x=document.getElementById("show");
+            x.addEventListener("click",function(){
+               setTimeout(showtime,200);
+            });
+               function showtime(){
+               document.getElementById("show").innerHTML="show this msg 3sec";
+            
+
+
+
+        }
+</script>
+</body>
+</html>
