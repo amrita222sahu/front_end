@@ -6,24 +6,14 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Timing event</h1>
-    <h2>settimeout method()</h2>
-    <p id="clock">click</p>
-    <button id="show">click</button>
+    <h2 id="counter">0</h2>
     <script>
+        let count = 0;
+        setInterval(function(){
+            count++;
+            document.getElementById("counter").innerText = count;
 
-        
-            const x=document.getElementById("show");
-            x.addEventListener("click",function(){
-               setTimeout(showtime,200);
-            });
-               function showtime(){
-               document.getElementById("show").innerHTML="show this msg 3sec";
-            
-
-
-
-        }
-</script>
+        },2000);
+    </script>
 </body>
 </html>
